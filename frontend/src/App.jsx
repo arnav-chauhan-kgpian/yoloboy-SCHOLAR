@@ -36,7 +36,7 @@ export default function App() {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.title}>ScholarAI</h1>
+        <h1 style={styles.title}>Kairos</h1>
         <span style={styles.subtitle}>Autonomous Scholarship & Internship Agent</span>
         {isDemo && <span style={styles.demoBadge}>Demo Profile</span>}
         {sessionId && (

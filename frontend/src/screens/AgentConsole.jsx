@@ -15,7 +15,7 @@ export default function AgentConsole({ sessionId, isDemo, onComplete }) {
   useEffect(() => {
     if (!sessionId) return
 
-    setNarration((prev) => [...prev, '🚀 Starting ScholarAI pipeline...'])
+    setNarration((prev) => [...prev, '🚀 Starting Kairos pipeline...'])
 
     cleanupRef.current = streamSession(
       sessionId,

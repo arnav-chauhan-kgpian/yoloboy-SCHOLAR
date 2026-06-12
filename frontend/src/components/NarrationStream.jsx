@@ -9,7 +9,7 @@ export default function NarrationStream({ messages }) {
 
   return (
     <div style={styles.container}>
-      <h3 style={styles.title}>🧠 ScholarAI · Live Reasoning</h3>
+      <h3 style={styles.title}>🧠 Kairos · Live Reasoning</h3>
       <div style={styles.stream}>
         {messages.map((msg, i) => {
           const isAgent = msg.includes(']')

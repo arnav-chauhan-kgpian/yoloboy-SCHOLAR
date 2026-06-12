@@ -1,6 +1,6 @@
-# ScholarAI — Architecture (for Judges)
+# Kairos — Architecture (for Judges)
 
-A concise technical reference to how ScholarAI works under the hood.
+A concise technical reference to how Kairos works under the hood.
 
 ---
 

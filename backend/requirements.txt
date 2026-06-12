@@ -1,4 +1,4 @@
-# Runtime dependencies for the ScholarAI backend.
+# Runtime dependencies for the Kairos backend.
 # (Mirror of pyproject.toml [project.dependencies] for simple/Docker installs.)
 fastapi>=0.110
 uvicorn[standard]>=0.29

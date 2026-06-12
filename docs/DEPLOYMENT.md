@@ -1,6 +1,6 @@
-# Deploying ScholarAI (free)
+# Deploying Kairos (free)
 
-ScholarAI deploys as **one container**: the multi-stage `Dockerfile` builds the React/Vite frontend and serves it *from* the FastAPI backend. So `/` returns the app and `/api/*` is the API — same origin, no CORS, one URL to share.
+Kairos deploys as **one container**: the multi-stage `Dockerfile` builds the React/Vite frontend and serves it *from* the FastAPI backend. So `/` returns the app and `/api/*` is the API — same origin, no CORS, one URL to share.
 
 This works on any Docker host. Below: **Render** (recommended, free, no local Docker), then alternatives.
 

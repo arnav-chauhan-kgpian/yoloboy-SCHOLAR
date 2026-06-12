@@ -6,7 +6,7 @@ from app.config import settings
 import os
 
 app = FastAPI(
-    title="ScholarAI API",
+    title="Kairos API",
     version="0.1.0",
     description="Autonomous Scholarship & Internship Agent",
 )

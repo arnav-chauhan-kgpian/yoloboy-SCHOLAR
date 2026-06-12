@@ -1,8 +1,10 @@
-# 🎓 ScholarAI — Autonomous Scholarship & Internship Agent
+# 🎓 Kairos — Autonomous Scholarship & Internship Agent
 
-> A student uploads their résumé **once**. ScholarAI autonomously finds opportunities, checks eligibility with **explainable reasoning**, ranks the best matches, drafts tailored applications, and builds a prioritized action plan.
+### 🔗 Live: **[scholarai-gl0x.onrender.com](https://scholarai-gl0x.onrender.com/)**
 
-Built for the **AI Agents & Automation** track.
+> A student uploads their résumé **once**. Kairos autonomously finds opportunities, checks eligibility with **explainable reasoning**, ranks the best matches, drafts tailored applications, and builds a prioritized action plan.
+
+Built for the **AI Agents & Automation** track - FutureAI Global Hack'on 2026.
 
 ---
 
@@ -19,7 +21,7 @@ A single quality application can take **3–6 hours**. The students who need hel
 
 ## 💡 Solution Overview
 
-ScholarAI replaces the 6-hours-per-application grind with an **autonomous multi-agent pipeline**. From a single résumé, it:
+Kairos replaces the 6-hours-per-application grind with an **autonomous multi-agent pipeline**. From a single résumé, it:
 
 1. **Extracts** a structured student profile.
 2. **Discovers** relevant scholarships and internships.
@@ -47,7 +49,7 @@ The whole loop runs **live, with a narrated reasoning stream** — and works **e
 
 ## 🤖 Agent Architecture
 
-ScholarAI is a **blackboard multi-agent system**: agents never talk to each other directly — they read from and write to a single shared `SessionState`, orchestrated by a LangGraph state graph.
+Kairos is a **blackboard multi-agent system**: agents never talk to each other directly — they read from and write to a single shared `SessionState`, orchestrated by a LangGraph state graph.
 
 | Agent | Responsibility |
 |---|---|
@@ -93,7 +95,7 @@ Every agent appends to a sanitized **narration stream** that the UI renders live
 - FastAPI (API + SSE streaming)
 - LangGraph (multi-agent orchestration) + LangChain
 - Pydantic v2 (typed state & models)
-- OpenAI via LangChain (optional — deterministic fallback otherwise)
+- LLM via LangChain — provider-agnostic (Groq / Anthropic / Google / OpenAI); deterministic fallback otherwise
 
 **Frontend**
 - React 18 + Vite
@@ -205,10 +207,10 @@ python -m pytest -q     # 46 passing
 
 The fastest path to the full experience — no résumé, no API key required:
 
-1. Start backend (`:8000`) and frontend (`:5173`).
+1. Start backend (`:9000`) and frontend (`:5173`).
 2. Open **http://localhost:5173**.
 3. Click **🚀 Run Demo**.
-4. Watch ScholarAI process the **Maya Chen** profile end-to-end:
+4. Watch Kairos process the **Maya Chen** profile end-to-end:
    - Profile extraction → live narration → eligibility screening → match ranking → tailored applications → action plan.
 
 Demo Mode uses the **exact same graph and agents** as a real upload — there is no special execution path.
@@ -217,22 +219,9 @@ Demo Mode uses the **exact same graph and agents** as a real upload — there is
 
 ---
 
-## ☁️ Deploy (free, one service)
-
-The repo ships a multi-stage `Dockerfile` that builds the frontend and serves it **from** the FastAPI backend — one container, one URL, no CORS. Deploy free on **Render** (or Hugging Face Spaces / Railway / Fly.io — same Dockerfile):
-
-1. Push this repo to GitHub.
-2. On [Render](https://render.com): **New → Blueprint** → pick the repo (it reads `render.yaml`).
-3. Set the **`GROQ_API_KEY`** secret in the dashboard.
-4. Deploy → you get a public `https://…onrender.com` URL serving the whole app.
-
-Full step-by-step (and alternatives) in **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**.
-
----
-
 ## 👤 Example User Flow
 
-1. **Upload / Demo** → ScholarAI extracts Maya's profile and shows a profile summary card.
+1. **Upload / Demo** → Kairos extracts Maya's profile and shows a profile summary card.
 2. **Discovery** → it surfaces relevant scholarships and internships.
 3. **Eligibility** → cards appear grouped ✅ / ⚠️ / ❌, each with rule-level reasons:
    - ❌ *Gates Millennium Scholars — Requires US Citizen or Permanent Resident. Student = International Student.*
