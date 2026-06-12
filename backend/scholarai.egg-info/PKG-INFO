@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: scholarai
+Version: 0.1.0
+Summary: Autonomous Scholarship & Internship Agent
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.110
+Requires-Dist: uvicorn[standard]>=0.29
+Requires-Dist: langgraph>=0.2
+Requires-Dist: langchain>=0.2
+Requires-Dist: langchain-openai>=0.1
+Requires-Dist: langchain-community>=0.1
+Requires-Dist: pydantic>=2.7
+Requires-Dist: python-multipart>=0.0.9
+Requires-Dist: sse-starlette>=2.0
+Requires-Dist: httpx>=0.27
+Requires-Dist: python-dotenv>=1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23; extra == "dev"
+Requires-Dist: httpx>=0.27; extra == "dev"
